@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: recommendation
+  datasource:
+    url: ${DATABASE_URL:jdbc:h2:file:./data/recommendation}
+    username: ${DB_USERNAME:sa}
+    password: ${DB_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: ${PORT:8080}
+
+admin:
+  key: ${ADMIN_KEY:local-dev-key}
